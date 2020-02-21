@@ -4,8 +4,21 @@
 
   //
   // TODO: build the swim command fetcher here
-  //
+ var getSwimCommand = function () {
+    $.ajax({
+      type: 'GET',
+      url: serverUrl,
+      success: (response) => {
+        //move swim team with response as argument
+        SwimTeam.move(response)
+      },
+      error: () => {
+        console.log('ERROR ERROR ERROR')
+      }
+    })
+  }  //
 
+  setInterval(getSwimCommand, 2000)
   /////////////////////////////////////////////////////////////////////
   // The ajax file uplaoder is provided for your convenience!
   // Note: remember to fix the URL below.
