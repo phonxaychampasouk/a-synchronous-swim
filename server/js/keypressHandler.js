@@ -1,6 +1,5 @@
 const _ = require('underscore');
 const keypress = require('keypress');
-
 ///////////////////////////////////////////////////////////////////////////////
 // Utility Function ///////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
@@ -34,7 +33,6 @@ module.exports.initialize = (callback) => {
     if (key && key.ctrl && key.name === 'c') {
       process.exit();
     }
-
     // check to see if the keypress itself is a valid message
     if (isValidMessage(key.name)) {
       callback(key.name);

@@ -2,8 +2,8 @@
 
   const serverUrl = 'http://127.0.0.1:3000';
 
-  //
-  // TODO: build the swim command fetcher here
+
+  //TODO: build the swim command fetcher here
  var getSwimCommand = function () {
     $.ajax({
       type: 'GET',
@@ -16,13 +16,18 @@
         console.log('ERROR ERROR ERROR')
       }
     })
-  }  //
+  }
 
-  setInterval(getSwimCommand, 2000)
+ setInterval(getSwimCommand, 100)
+
+
+
   /////////////////////////////////////////////////////////////////////
   // The ajax file uplaoder is provided for your convenience!
   // Note: remember to fix the URL below.
   /////////////////////////////////////////////////////////////////////
+
+
 
   const ajaxFileUplaod = (file) => {
     var formData = new FormData();
@@ -60,3 +65,8 @@
   });
 
 })();
+
+// NEXT STEPS
+//Setup client to constantly ask for get requests
+
+//Allow keypresses to manipulate swimmers
